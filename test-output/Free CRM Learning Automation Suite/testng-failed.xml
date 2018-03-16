@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Free CRM Learning Automation Suite]">
+  <test name="Free CRM Learning Automation Test Cases(failed)">
+    <classes>
+      <class name="testcases.LoginPageTest">
+        <methods>
+          <include name="LoginTest"/>
+          <include name="SetUp"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- testcases.LoginPageTest -->
+      <class name="testcases.ContactsPageTest">
+        <methods>
+          <include name="TearDown"/>
+          <include name="selectContactscheckboxbynameTest"/>
+          <include name="verifyContactLabelTest"/>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- testcases.ContactsPageTest -->
+      <class name="testcases.HomePageTest">
+        <methods>
+          <include name="TearDown"/>
+          <include name="verifyHomePageTitleTest"/>
+          <include name="verifyContactsLinkTest"/>
+          <include name="verifyUserNameTest"/>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- testcases.HomePageTest -->
+    </classes>
+  </test> <!-- Free CRM Learning Automation Test Cases(failed) -->
+</suite> <!-- Failed suite [Free CRM Learning Automation Suite] -->

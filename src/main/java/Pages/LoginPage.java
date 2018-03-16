@@ -48,12 +48,12 @@ public class LoginPage extends TestBase {
 		return FreeCRMLogo.isDisplayed();
 	}
 	
-	public HomePage Login(String un, String pwd)  {
+	public HomePage Login(String un, String pwd) throws InterruptedException  {
 		username.sendKeys(un);
 		password.sendKeys(pwd);
-		clickOn(driver, Loginbtn, 50000);
-		//Thread.sleep(5000);
-	   // Loginbtn.click();
+		//clickOn(driver, Loginbtn, 5000);
+		Thread.sleep(5000);
+	    Loginbtn.click();
 		return new HomePage();
 		
 	}

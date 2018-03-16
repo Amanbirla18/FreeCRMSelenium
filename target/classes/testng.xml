@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Free CRM Learning Automation Suite" parallel="false">
+  <test name="Free CRM Learning Automation Test Cases">
+    <classes>
+      <class name="testcases.LoginPageTest"/>
+      <class name="testcases.HomePageTest"/>
+      <class name="testcases.ContactsPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

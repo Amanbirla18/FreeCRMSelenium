@@ -44,7 +44,7 @@ public class LoginPageTest extends TestBase {
   }
   
   @Test(priority = 3)
-    public void LoginTest() {
+    public void LoginTest() throws InterruptedException {
 	 hp = lp.Login(prop.getProperty("username"), prop.getProperty("password"));
 	 
 	 
