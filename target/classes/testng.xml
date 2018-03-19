@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Free CRM Learning Automation Suite" parallel="false">
+
+	<listeners>
+		<listener class-name="ExtentReportListener.ExtentReportListenser" />
+	</listeners>
+	
   <test name="Free CRM Learning Automation Test Cases">
     <classes>
       <class name="testcases.LoginPageTest"/>

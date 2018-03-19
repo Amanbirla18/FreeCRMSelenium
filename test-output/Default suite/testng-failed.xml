@@ -6,7 +6,10 @@
       <class name="testcases.ContactsPageTest">
         <methods>
           <include name="TearDown"/>
+          <include name="selectContactscheckboxbynameTest"/>
           <include name="validateNewContact"/>
+          <include name="verifyContactLabelTest"/>
+          <include name="validateNewContact1"/>
           <include name="SetUp"/>
         </methods>
       </class> <!-- testcases.ContactsPageTest -->

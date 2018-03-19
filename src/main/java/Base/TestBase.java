@@ -10,16 +10,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 //import testutils.TestUtil;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import testutils.TestUtil;
+import testutils.WebEventListener;
 
 public class TestBase {
 	
 	public static WebDriver driver;
 	public static Properties prop;
+	public static EventFiringWebDriver e_driver;
+	
+	public static   WebEventListener eventListener;
 	
 	public TestBase(){  //Constructor 
 		
@@ -46,6 +51,13 @@ public class TestBase {
 	     driver = new FirefoxDriver();
 		 
 	 }
+		 
+		e_driver = new EventFiringWebDriver(driver);
+		eventListener = new WebEventListener();
+		e_driver.register(eventListener);
+		driver = e_driver;
+		
+		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
