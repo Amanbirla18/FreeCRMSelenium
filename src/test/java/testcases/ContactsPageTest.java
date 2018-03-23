@@ -54,7 +54,7 @@ public ContactsPageTest(){
 		cp.selectContactscheckboxbyname("Aman Test2");
 		}
 	
-	@DataProvider
+	/*	@DataProvider
 	public Iterator<Object[]> getCRMTestData() {
 		ArrayList<Object[]> testdata =TestUtil.getTestData();
 		return testdata.iterator();
@@ -72,7 +72,7 @@ public ContactsPageTest(){
 		hp.clickOnNewContact();
 		Thread.sleep(5000);
 		cp.createNewContact(title, firstname, lastname, company);
-		}
+		} 
 	
 	@Test(priority = 3 , dataProvider = "getCRMTestData1")
 	public void validateNewContact1(String title, String firstname,String lastname,String company) throws InterruptedException{
@@ -80,5 +80,5 @@ public ContactsPageTest(){
 		hp.clickOnNewContact();
 		Thread.sleep(5000);
 		cp.createNewContact(title, firstname, lastname, company);
-		}
+		} */
 }

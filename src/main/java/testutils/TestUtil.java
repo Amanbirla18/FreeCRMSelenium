@@ -4,8 +4,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.IndexedColors;
@@ -13,7 +15,10 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TakesScreenshot;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -92,6 +97,24 @@ public class TestUtil extends TestBase {
 			}
 			return data;
 		}
+	 public static String takeSnapShot(WebDriver driver,String screenshotname) throws Exception {
+		 String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+	        //Convert web driver object to TakeScreenshot
+
+	        TakesScreenshot ts =(TakesScreenshot)driver;
+	        
+	        File Source=ts.getScreenshotAs(OutputType.FILE);
+	        
+	        String dest = "C:\\ExtentReports\\SC" + screenshotname+ dateName+ ".png";
+	        File Destination =new File(dest);
+			FileUtils.copyFile(Source, Destination);
+			
+	        System.out.println("Screenshot taken");
+	        return dest;
+	                               
+
+	    }
+
+	}
 	
 	 
-}

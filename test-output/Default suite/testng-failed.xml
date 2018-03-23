@@ -3,16 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testcases.ContactsPageTest">
+      <class name="testcases.LoginPageTest">
         <methods>
-          <include name="TearDown"/>
-          <include name="selectContactscheckboxbynameTest"/>
-          <include name="validateNewContact"/>
-          <include name="verifyContactLabelTest"/>
-          <include name="validateNewContact1"/>
+          <include name="setExtent"/>
+          <include name="LoginPageTitle"/>
           <include name="SetUp"/>
+          <include name="endReport"/>
+          <include name="TearDown"/>
         </methods>
-      </class> <!-- testcases.ContactsPageTest -->
+      </class> <!-- testcases.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

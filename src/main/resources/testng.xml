@@ -8,7 +8,7 @@
   <test name="Free CRM Learning Automation Test Cases">
     <classes>
       <class name="testcases.LoginPageTest"/>
-      <class name="testcases.HomePageTest"/>
+       <class name="testcases.HomePageTest"/> 
       <class name="testcases.ContactsPageTest"/>
     </classes>
   </test> <!-- Test -->
