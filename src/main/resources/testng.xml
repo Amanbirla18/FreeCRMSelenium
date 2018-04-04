@@ -3,6 +3,7 @@
 
 	<listeners>
 		<listener class-name="ExtentReportListener.ExtentReportListenser" />
+		<listener class-name="testutils.ListenerTestNG"/>
 	</listeners>
 	
   <test name="Free CRM Learning Automation Test Cases">

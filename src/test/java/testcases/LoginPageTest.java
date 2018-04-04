@@ -3,6 +3,7 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
@@ -12,7 +13,7 @@ import ExtentReportListener.ExtentReportListenser;
 import Pages.HomePage;
 import Pages.LoginPage;
 import testutils.TestUtil;
-
+@Listeners(testutils.ListenerTestNG.class)
 public class LoginPageTest extends TestBase {
 	LoginPage lp;
 	HomePage hp;
