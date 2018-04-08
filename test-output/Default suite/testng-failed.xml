@@ -5,10 +5,10 @@
     <classes>
       <class name="testcases.LoginPageTest">
         <methods>
-          <include name="setExtent"/>
+          <include name="CRMLogoImgTest"/>
           <include name="LoginPageTitle"/>
+          <include name="LoginTest"/>
           <include name="SetUp"/>
-          <include name="endReport"/>
           <include name="TearDown"/>
         </methods>
       </class> <!-- testcases.LoginPageTest -->

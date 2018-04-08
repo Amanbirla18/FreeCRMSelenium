@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 //import testutils.TestUtil;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,7 +24,6 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
-	
 	public static   WebEventListener eventListener;
 	
 	public TestBase(){  //Constructor 
@@ -49,6 +49,11 @@ public class TestBase {
 	 } else if (browserName.equals("firefox")){
 		 System.setProperty("webdriver.gecko.driver", "C:\\NewGeckoDriver\\geckodriver.exe");
 	     driver = new FirefoxDriver();
+		 
+	 }
+	 else if (browserName.equals("IE")){
+		 System.setProperty("webdriver.ie.driver", "C:\\NewGeckoDriver\\IEDriverServer.exe");
+	     driver = new InternetExplorerDriver();
 		 
 	 }
 		 

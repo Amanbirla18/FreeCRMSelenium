@@ -1,37 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Free CRM Learning Automation Suite]" parallel="methods">
-  <listeners>
-    <listener class-name="ExtentReportListener.ExtentReportListenser"/>
-    <listener class-name="testutils.ListenerTestNG"/>
-  </listeners>
-  <test name="Free CRM Learning Automation Test Cases(failed)" parallel="methods">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="testcases.ContactsPageTest">
-        <methods>
-          <include name="TearDown"/>
-          <include name="selectContactscheckboxbynameTest"/>
-          <include name="verifyContactLabelTest"/>
-          <include name="SetUp"/>
-        </methods>
-      </class> <!-- testcases.ContactsPageTest -->
       <class name="testcases.LoginPageTest">
         <methods>
+          <include name="CRMLogoImgTest"/>
           <include name="LoginPageTitle"/>
           <include name="LoginTest"/>
           <include name="SetUp"/>
           <include name="TearDown"/>
         </methods>
       </class> <!-- testcases.LoginPageTest -->
-      <class name="testcases.HomePageTest">
-        <methods>
-          <include name="TearDown"/>
-          <include name="verifyHomePageTitleTest"/>
-          <include name="verifyContactsLinkTest"/>
-          <include name="verifyUserNameTest"/>
-          <include name="SetUp"/>
-        </methods>
-      </class> <!-- testcases.HomePageTest -->
     </classes>
-  </test> <!-- Free CRM Learning Automation Test Cases(failed) -->
-</suite> <!-- Failed suite [Free CRM Learning Automation Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
