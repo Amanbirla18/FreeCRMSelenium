@@ -4,10 +4,14 @@ package testutils;
 
 	import org.testng.ITestContext; 
 	import org.testng.ITestListener; 
-	import org.testng.ITestResult; 
+	import org.testng.ITestResult;
+
+import Base.TestBase; 
 	 
-	public class ListenerTestNG implements ITestListener 
+	public class ListenerTestNG extends TestBase implements ITestListener 
 	{ 
+		
+		TestUtil tb = new TestUtil();
 	 
 	    public void onFinish(ITestContext Result) 
 	    { 
@@ -28,6 +32,13 @@ package testutils;
 	    public void onTestFailure(ITestResult Result) 
 	    { 
 	    System.out.println("The name of the testcase failed is :"+Result.getName()); 
+	    try {
+			tb.takeSnapShot(driver, Result.getMethod().getMethodName());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    
 	    } 
 	 
 	    // When Test case get Skipped, this method is called. 

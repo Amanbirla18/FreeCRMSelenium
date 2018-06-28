@@ -1,6 +1,7 @@
 package testcases;
 
 import java.io.FileNotFoundException;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -16,6 +17,8 @@ import Pages.ContactsPage;
 import Pages.HomePage;
 import Pages.LoginPage;
 import testutils.TestUtil;
+
+
 @Listeners(testutils.ListenerTestNG.class)
 public class ContactsPageTest extends TestBase{
 

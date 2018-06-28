@@ -97,7 +97,7 @@ public class TestUtil extends TestBase {
 			}
 			return data;
 		}
-	 public static String takeSnapShot(WebDriver driver,String screenshotname) throws Exception {
+	 public static String takeSnapShot(WebDriver driver,String testmethodname) throws Exception {
 		 String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 	        //Convert web driver object to TakeScreenshot
 
@@ -105,10 +105,11 @@ public class TestUtil extends TestBase {
 	        
 	        File Source=ts.getScreenshotAs(OutputType.FILE);
 	        
-	        String dest = "C:\\ExtentReports\\SC" + screenshotname+ dateName+ ".png";
+	        String dest = "C:/ExtentReports/SC1/" + testmethodname + "_"+ dateName+ ".png";
+	        System.out.println("");
 	        File Destination =new File(dest);
 			FileUtils.copyFile(Source, Destination);
-			
+	        System.out.println("");
 	        System.out.println("Screenshot taken");
 	        return dest;
 	                               
