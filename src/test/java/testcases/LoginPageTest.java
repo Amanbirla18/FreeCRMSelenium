@@ -42,9 +42,8 @@ public class LoginPageTest extends TestBase {
    public void LoginPageTitle(){
 	String title = lp.ValidateLoginPageTitle();
 	
-	  Assert.assertEquals(title, "1 Free CRM for Any Business: Online Customer Relationship Software");
+	  Assert.assertEquals(title, "Free CRM software in the cloud powers sales and customer service");
 	  
-	  //Removed # from front of 1 to fail this test case
   }
   @Test(priority = 2)
     public void CRMLogoImgTest(){
@@ -55,7 +54,8 @@ public class LoginPageTest extends TestBase {
   @Test(priority = 3)
     public void LoginTest() throws InterruptedException {
 	 hp = lp.Login(prop.getProperty("username"), prop.getProperty("password"));
-	 
+	 String homepagetitle =  hp.ValidateHomePageTitle();
+	 Assert.assertEquals(homepagetitle, "CRMPRO");
 	 
   }
   

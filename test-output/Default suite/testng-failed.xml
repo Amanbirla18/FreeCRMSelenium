@@ -5,8 +5,6 @@
     <classes>
       <class name="testcases.LoginPageTest">
         <methods>
-          <include name="CRMLogoImgTest"/>
-          <include name="LoginPageTitle"/>
           <include name="LoginTest"/>
           <include name="SetUp"/>
           <include name="TearDown"/>
