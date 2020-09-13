@@ -23,14 +23,12 @@ public class TestBase {
 	
 	public static WebDriver driver;
 	public static Properties prop;
-	public static EventFiringWebDriver e_driver;
-	public static   WebEventListener eventListener;
 	
 	public TestBase(){  //Constructor 
 		
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("C:/Selenium_Workspace/FreeCRM/src/main/java/config/config.properties");
+			FileInputStream ip = new FileInputStream("C:\\Users\\komal\\eclipse-workspace\\DashHudson\\src\\main\\java\\config\\config.properties");
 				prop.load(ip);	
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -44,25 +42,14 @@ public class TestBase {
 	 public static void initialization(){
 		 String browserName = prop.getProperty("browser");
 		 if(browserName.equals("chrome")){
-		 System.setProperty("webdriver.chrome.driver", "C:\\NewGeckoDriver\\chromedriver.exe"); 
+		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\komal\\Drivers\\chromedriver.exe"); 
 		 driver = new ChromeDriver();
-	 } else if (browserName.equals("firefox")){
-		 System.setProperty("webdriver.gecko.driver", "C:\\NewGeckoDriver\\geckodriver.exe");
-	     driver = new FirefoxDriver();
-		 
+	 } 
+		 else if (browserName.equals("firefox")){
+		 System.setProperty("webdriver.gecko.driver", "C:\\Users\\komal\\Drivers\\geckodriver.exe");
+	     driver = new FirefoxDriver(); 
 	 }
-	 else if (browserName.equals("IE")){
-		 System.setProperty("webdriver.ie.driver", "C:\\NewGeckoDriver\\IEDriverServer.exe");
-	     driver = new InternetExplorerDriver();
-		 
-	 }
-		 
-		e_driver = new EventFiringWebDriver(driver);
-		eventListener = new WebEventListener();
-		e_driver.register(eventListener);
-		driver = e_driver;
-		
-		
+
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
@@ -74,6 +61,8 @@ public class TestBase {
 			new WebDriverWait(driver,timeout).ignoring(StaleElementReferenceException.class).until(ExpectedConditions.elementToBeClickable(locator));
 		locator.click();
 		}
+	 
+	
 }
 
 	
